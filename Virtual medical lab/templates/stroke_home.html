@@ -1,0 +1,148 @@
+<!-- </head> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Prediction</title>
+
+    <!-- <title>Heart Disease Diagnosis</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+</head>
+
+<body>
+
+    <section class="header_stroke_home">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+            <div class="nav-links" id="navlinks">
+
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="url_for('home')}}">Diagnosis</a></li>
+                    <li><a href="url_for('home')}}">About Me</a></li>
+
+                </ul>
+    </section>
+
+
+
+
+
+    <section class="course">
+        <h1>Information Required for Diagnosis</h1> <br>
+        <p>Read it cearfully</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h4>Age</h4>
+
+                <p>age of the patient.</p>
+            </div>
+
+
+
+
+            <div class="course-col">
+
+
+                <h4>Ever Married</h4>
+                <p>Did the patient ever married Yes or No.</p>
+            </div>
+
+
+            <div class="course-col">
+
+                <h4>Work Type</h4>
+                <p>"children", "Govt_job", "Never_worked", "Private" or "Self-employed".</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="course-col">
+
+                <h4>Avg Glucose Level</h4>
+                <p>Avg Glucose Level in blood.</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                <h4>BMI</h4>
+                <p> body mass index</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                
+            </div>
+        </div>
+        
+
+        </div>
+
+        </div>
+    </section>
+
+
+    <section class="course">
+        <form action="{{ url_for('stroke_risk_predict') }}" method="POST">
+
+
+            <h1>Let's Predict</h1> <br>
+            <p>There are so many dignosis that we offer</p>
+
+            <div class="heart">
+                <div class="predict">
+
+                    <label for="1st">Age</label>
+                    <input id="1st" name="age" placeholder="Enter your age" required="required">
+                    <br>
+                    <br>
+                    <label for="2nd">Ever Married</label>
+                    <input id="2nd" name="ever_married" placeholder="0 or 1" required="required">
+                    <br>
+                    <br>
+
+                    <label for="3rd">Work Type</label>
+                    <input id="3rd" name="work_type" placeholder="Range Between  0 to 4" required="required">
+                    <br>
+                    <br>
+
+                    <label for="4th">Avgerage Glucose Level</label>
+                    <input id="4th" name="caa" placeholder="Range Between  55 TO 271" required="required">
+                    <br>
+                    <br>
+
+                    <label for="5th">BMI</label>
+                    <input id="5th" name="bmi" placeholder="Range Between  10 TO 97" required="required">
+
+                    <br>
+                    <br>
+
+                    <button  id="sub" type="submit ">Submit</button>
+
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <h4>Source</h4>
+            <p>Kaggle</p>
+
+
+        </section>
+
+
+
+</body>

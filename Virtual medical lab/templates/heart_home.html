@@ -1,0 +1,163 @@
+<!-- </head> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Prediction</title>
+
+    <!-- <title>Heart Disease Diagnosis</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+</head>
+
+<body>
+
+    <section class="header_heart">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="static/images/logo.png">logo</a>
+            <div class="nav-links" id="navlinks">
+
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="url_for('home')}}">Diagnosis</a></li>
+                    <li><a href="url_for('home')}}">About Me</a></li>
+
+                </ul>
+    </section>
+
+
+
+
+
+
+    <section class="course">
+        <h1>Information Required for Diagnosis</h1> <br>
+        <p>Read it cearfully</p>
+
+        <div class="row">
+            <div class="course-col">
+
+                <h4>Max Heart Rate Achieved</h4>
+                <p>Your heart rate, or pulse, is the number of times your heart beats
+                    in 1 minute. Heart rates vary from person to person.
+                    It’s lower when you’re at rest and higher when you exercise.</p>
+            </div>
+
+        
+        
+            <div class="course-col">
+
+                <h4>Exercise Induced Angina</h4>
+                <p>exercise induced angina (1 = yes; 0 = no).</p>
+            </div>
+
+            <div class="course-col">
+
+                <h4>Chest Pain Type</h4>
+                <p>
+
+                    Value 1: typical angina
+                    Value 2: atypical angina
+                    Value 3: non-anginal pain
+                    Value 4: asymptomatic</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="course-col">
+                <h4>CAA </h4>
+                <p>number of major vessels (0-3)</p>
+            </div>
+        
+          
+       
+
+            <div class="course-col">
+
+                <h4>Old peak</h4>
+                <p> Previous peak.</p>
+            </div>
+            <div class="course-col">
+
+                
+            </div>
+        </div>
+
+
+       
+
+        
+    </section>
+
+
+
+    <section class="course">
+        <form action="{{ url_for('heart_predict') }}" method="POST">
+
+
+            <h1>Let's Predict</h1> <br>
+            <p>There are so many dignosis that we offer</p>
+
+            <div class="heart">
+                <div class="predict">
+
+                    <label for="1st">Chest pain type</label>
+                    <input id="1st" name="chest_pain_type" placeholder="Range Between  0-4" required="required">
+                    <br>
+                    <br>
+                    <label for="2nd">Exercise Include Angina</label>
+                    <input id="2nd" name="Exercise_Include_Angina" placeholder="0 or 1" required="required">
+                    <br>
+                    <br>
+
+                    <label for="3rd">Old Peak</label>
+                    <input id="3rd" name="oldpeak" placeholder="Range Between  0.0 to 6.2" required="required">
+                    <br>
+                    <br>
+
+                    <label for="4th">Caa</label>
+                    <input id="4th" name="caa" placeholder="Range Between  0-4" required="required">
+                    <br>
+                    <br>
+
+                    <label for="5th">Thall</label>
+                    <input id="5th" name="thall" placeholder="Range Between  0-3" required="required">
+
+                    <br>
+                    <br>
+
+                    <button  id="sub" type="submit ">Submit</button>
+
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <h4>Source</h4>
+            <p>Creators:
+
+                1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
+                2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
+                3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.
+                4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation: Robert Detrano, M.D., Ph.D.
+                
+                Donor:
+                
+                David W. Aha (aha '@' ics.uci.edu) (714) 856-8779
+                
+                </p>
+
+
+        </section>
+
+
+
+</body>

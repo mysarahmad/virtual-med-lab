@@ -1,0 +1,161 @@
+<!-- </head> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Prediction</title>
+
+    <!-- <title>Heart Disease Diagnosis</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+</head>
+
+<body>
+
+    <section class="header_hep_home">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+            <div class="nav-links" id="navlinks">
+
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="url_for('home')}}">Diagnosis</a></li>
+                    <li><a href="url_for('home')}}">About Me</a></li>
+
+                </ul>
+    </section>
+
+
+
+
+
+    <section class="course">
+        <h1>Information Required for Diagnosis</h1> <br>
+        <p>Read it cearfully</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Age</h3>
+
+                <p>Age of the patient</p>
+            </div>
+
+
+
+
+            <div class="course-col">
+
+
+                <h4>Bilirubin</h4>
+                <p>Bilirubin (bil-ih-ROO-bin) is a yellowish pigment that is made during the normal breakdown of red blood cells. Bilirubin passes through the liver and is eventually excreted out of the body..</p>
+            </div>
+
+
+            <div class="course-col">
+
+                <h4>Alk Phosphate</h4>
+                <p>An alkaline phosphatase (ALP) test measures the amount of ALP in the blood. It is used to diagnose liver damage or bone disorders..</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="course-col">
+
+                <h4>Sgot</h4>
+                <p>SGOT: Serum glutamic oxaloacetic transaminase, an enzyme that is normally present in liver and heart cells. SGOT is released into blood when the liver or heart is damaged..</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                <h4>Albumin</h4>
+                <p>Albumin is a protein made by your liver. Albumin helps keep fluid in your bloodstream so it doesn't leak into other tissues. It is also carries various substances throughout your body, including hormones, vitamins, and enzymes. Low albumin levels can indicate a problem with your liver or kidneys.</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                
+            </div>
+        </div>
+        
+
+        </div>
+
+        </div>
+    </section>
+
+
+    
+
+    <section class="course">
+        <form action="{{ url_for('hepatitis_predict') }}" method="POST">
+
+
+            <h1>Let's Predict</h1> <br>
+            <p>There are so many dignosis that we offer</p>
+
+            <div class="heart">
+                <div class="predict">
+
+                    <label for="1st">Age</label>
+                    <input id="1st" name="age" placeholder="Enter your age" required="required">
+                    <br>
+                    <br>
+                    <label for="2nd">Bilirubin</label>
+                    <input id="2nd" name="bilirubin" placeholder="0.3 or 8" required="required">
+                    <br>
+                    <br>
+
+                    <label for="3rd">Alk Phosphate</label>
+                    <input id="3rd" name="alk_phosphate" placeholder="Range Between  26 to 295" required="required">
+                    <br>
+                    <br>
+
+                    <label for="4th">Sgot</label>
+                    <input id="4th" name="sgot" placeholder="Range Between  14 to 648 " required="required">
+                    <br>
+                    <br>
+
+                    <label for="5th">Albumin</label>
+                    <input id="5th" name="albumin" placeholder="Range Between  2.1 to 6.4" required="required">
+
+                    <br>
+                    <br>
+
+                    <button  id="sub" type="submit ">Submit</button>
+
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <h4>Source</h4>
+            <p>Creator:
+
+                unknown
+                
+                Donor:
+                
+                G.Gong (Carnegie-Mellon University) via
+                Bojan Cestnik
+                Jozef Stefan Institute
+                Jamova 39
+                61000 Ljubljana
+                Yugoslavia (tel.: (38)(+61) 214-399 ext.287) }</p>
+
+
+        </section>
+
+
+
+</body>

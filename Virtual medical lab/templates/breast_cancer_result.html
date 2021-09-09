@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="with=device-width,initial-scale=1.0">
+  <title>Medical Lab</title>
+
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+
+
+
+
+</head>
+
+<body>
+  <section class="header_heart_result">
+    <nav>
+      <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+      <div class="nav-links" id="navlinks">
+
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="url_for('home')}}">Diagnosis</a></li>
+          <li><a href="{{url_for('about')}}">About Me</a></li>
+
+        </ul>
+
+      </div>
+
+
+    </nav>
+    <div class="result">
+        {% if prediction==1 %}
+            <h1><span class='danger'>Oops! <br><br>You have High Chances of Breast-cancer!.</span></h1>
+            
+        {% elif prediction==0 %}
+            <h1><span class='safe'>Congratulation!<br><br><br><br><br> have low Chances of Breast-cancer!.</span></h1>
+            
+        {% endif %}
+    </div>
+    </section>
+
+
+
+
+
+    <!-------about us ------------>
+
+   
+   
+
+  <!---------footer -->
+  <section class="footer">
+    <h4>about us</h4>
+    <p>we are a multi billion $</p>
+    <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+
+
+
+
+    </div>
+  </section>
+
+
+
+</body>
+
+</html>

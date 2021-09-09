@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="with=device-width,initial-scale=1.0">
+  <title>Medical Lab</title>
+
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+
+
+
+
+</head>
+
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+      <div class="nav-links" id="navlinks">
+
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="url_for('home')}}">Diagnosis</a></li>
+          <li><a href="{{url_for('about')}}">About Me</a></li>
+
+        </ul>
+
+      </div>
+
+
+    </nav>
+    <div class="text-box">
+      <h1>Virtual Medical Lab</h1>
+      <p>This is your Virtual Medical Lab.</p>
+      <a href="" class="hero-btn">Visit us to know more</a>
+
+    </div>
+
+    <!-------------------- diseases ------------>
+  </section>
+
+  <section class="course">
+    <h1>Diagnosis we offer</h1> <br>
+    <p>There are so many dignosis that we offer</p>
+
+    <div class="row">
+      <div class="course-col">
+        <a href="/heart"><h3>Heart attack</h3></a>
+        
+        <p>Heart attack is a very risky problem</p>
+      </div>
+      <div class="course-col">
+        <a href="/breast_cancer"><h3>Breast-cancer</h3></a>
+        
+        <p>Breast-cancer is a very risky problem</p>
+      </div>
+      <div class="course-col">
+        <a href="/chronic_kidney"><h3>Chronic Kidney</h3></a>
+        <p>Heart attack is a very risky problem</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="course-col">
+        <a href="/stroke"><h3>Stroke Risk</h3></a>
+        
+        <p>Heart attack is a very risky problem</p>
+      </div>
+      
+      <div class="course-col">
+        <a href="/hepatitis"><h3>Hepitatis</h3></a>
+        
+        <p>Heart attack is a very risky problem</p>
+      </div>
+
+      <div class="course-col">
+        <a href="/diabetes"><h3>diabetes</h3></a>
+        
+        <p>Heart attack is a very risky problem</p>
+      </div>
+
+    </div>
+
+  
+
+
+  <!---------call to action -->
+  <section class="cta">
+    <h1>For diagnosis enroll for free</h1>
+    <a href="{{url_for('contact')}}" class="hero-btn">contact us</a>
+
+  </section>
+
+  <!---------footer -->
+  <section class="footer">
+    <h4>about us</h4>
+    <p>we are a multi billion $</p>
+    <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+    </div>
+  </section>
+
+
+
+</body>
+
+
+</html>

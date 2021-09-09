@@ -1,0 +1,184 @@
+<!-- </head> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Prediction</title>
+
+    <!-- <title>Heart Disease Diagnosis</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+</head>
+
+<body>
+
+    <section class="header_diabetes_home">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+            <div class="nav-links" id="navlinks">
+
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="url_for('home')}}">Diagnosis</a></li>
+                    <li><a href="url_for('home')}}">About Me</a></li>
+
+                </ul>
+    </section>
+
+
+
+
+
+   
+    <section class="course">
+        <h1>Information Required for Diagnosis</h1> <br>
+        <p>Read it cearfully</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Pregnancies</h3>
+
+                <p>Number of times pregnant</p>
+            </div>
+
+
+
+
+            <div class="course-col">
+
+
+                <h4>Glucose</h4>
+                <p>Plasma glucose concentration a 2 hours in an oral glucose tolerance test.</p>
+            </div>
+
+
+            <div class="course-col">
+
+                <h4>BloodPressure</h4>
+                <p>Diastolic blood pressure (mm Hg).</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="course-col">
+
+                <h4>SkinThickness</h4>
+                <p>Triceps skin fold thickness (mm).</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                <h4>Insulin</h4>
+                <p>2-Hour serum insulin (mu U/ml)</p>
+            </div>
+        
+
+            <div class="course-col">
+
+                <h4>BMI</h4>
+                <p>BMI</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="course-col">
+                <h4>DiabetesPedigreeFunction</h4>
+                <p>DiabetesPedigreeFunction.</p>
+            </div>
+        
+            <div class="course-col">
+
+                <h4>Age</h4>
+                <p>Age.</p>
+            </div>
+       
+
+            <div class="course-col">
+
+             
+            </div>
+        </div>
+
+
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="course">
+        <form action="{{ url_for('diabetes_predict') }}" method="POST">
+
+
+            <h1>Let's Predict</h1> <br>
+            <p>There are so many dignosis that we offer</p>
+
+            <div class="heart">
+                <div class="predict">
+
+                    <label for="1st">Pregnancies</label>
+                    <input id="1st" name="pregnancies" placeholder="Range Between  0 to 17" required="required">
+                    <br>
+                    <br>
+                    <label for="2nd">Glucose</label>
+                    <input id="2nd" name="glucose" placeholder="0 or 199" required="required">
+                    <br>
+                    <br>
+
+                    <label for="3rd">Blood Pressure</label>
+                    <input id="3rd" name="blood_pressure" placeholder="Range Between  0 to 122" required="required">
+                    <br>
+                    <br>
+
+                    <label for="4th">Skin Thickness</label>
+                    <input id="4th" name="skin_thickness" placeholder="Range Between  0 to 99" required="required">
+                    <br>
+                    <br>
+
+                    <label for="5th">Insulin</label>
+                    <input id="5th" name="insulin" placeholder="Range Between  0 to 846" required="required">
+
+                    <br>
+                    <br>
+                    <label for="5th">BMI</label>
+                    <input id="5th" name="bmi" placeholder="Range Between  0 to 67" required="required">
+
+                    <br>
+                    <br>
+                    <label for="5th">Diabetes Pedigree Function</label>
+                    <input id="5th" name="diabetes_pedigree_function" placeholder="Range Between 0.078 to 2.42" required="required">
+
+                    <br>
+                    <br>
+                    <label for="5th">Age</label>
+                    <input id="5th" name="age" placeholder="Enter your age" required="required">
+
+                    <br>
+                    <br>
+
+                    <button  id="sub" type="submit ">Submit</button>
+
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <h4>Source</h4>
+            <p>This dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases.</p>
+
+
+        </section>
+
+
+
+</body>

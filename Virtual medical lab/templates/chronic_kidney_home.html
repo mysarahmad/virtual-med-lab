@@ -1,0 +1,170 @@
+<!-- </head> -->
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <title>Prediction</title>
+
+    <!-- <title>Heart Disease Diagnosis</title> -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/fontawesome.min.css">
+</head>
+
+<body>
+
+    <section class="header_chronic_kidney">
+        <nav>
+            <a href="{{url_for('home')}}"><img src="static/images/logo.png"></a>
+            <div class="nav-links" id="navlinks">
+
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="url_for('home')}}">Diagnosis</a></li>
+                    <li><a href="url_for('home')}}">About Me</a></li>
+
+                </ul>
+    </section>
+
+
+
+
+   
+
+    <section class="course">
+        <h1>Information Required for Diagnosis</h1> <br>
+        <p>Read it cearfully</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>specific gravity</h3>
+
+                <p>specific gravity.</p>
+            </div>
+
+
+
+
+            <div class="course-col">
+
+
+                <h4>serum creatinine</h4>
+                <p> serum creatinine</p>
+            </div>
+
+
+            <div class="course-col">
+
+                <h4>hemoglobin</h4>
+                <p>hemoglobin.</p>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="course-col">
+
+                <h4>packed cell volume</h4>
+                <p>packed cell volume</p>
+                </div>
+
+                <div class="course-col">
+
+                    <h4>red blood cell count</h4>
+                    <p>red blood cell count</p>
+                </div>
+               
+                <div class="course-col">
+
+                    
+                </div>
+        </div>
+
+
+       
+
+        
+    </section>
+
+
+
+    <section class="course">
+        <form action="{{ url_for('chronic_kidney_predict') }}" method="POST">
+
+
+            <h1>Let's Predict</h1> <br>
+            <p>There are so many dignosis that we offer</p>
+
+            <div class="heart">
+                <div class="predict">
+
+                    <label for="1st">specific gravity</label>
+                    <input id="1st" name="specific_gravity" placeholder="1.005 to 1.025 " required="required">
+                    <br>
+                    <br>
+                    <label for="2nd">serum creatinine</label>
+                    <input id="2nd" name="serum_creatinine" placeholder="0.4 or 76" required="required">
+                    <br>
+                    <br>
+
+                    <label for="3rd">hemoglobin</label>
+                    <input id="3rd" name="hemoglobin" placeholder="Range Between  3.1 to 17" required="required">
+                    <br>
+                    <br>
+
+                    <label for="4th">packed cell volume</label>
+                    <input id="4th" name="packed_cell_volume" placeholder="Range Between  0 to 43" required="required">
+                    <br>
+                    <br>
+
+                    <label for="5th">red blood cell count</label>
+                    <input id="5th" name="red_blood_cell_count" placeholder="Range Between  0 to 48" required="required">
+
+                    <br>
+                    <br>
+
+                    <button  id="sub" type="submit ">Submit</button>
+
+                </div>
+            </div>
+        </form>
+
+        <section class="footer">
+            <h4>Source</h4>
+            <p>Dr.P.Soundarapandian.M.D.,D.M
+                (Senior Consultant Nephrologist),
+                Apollo Hospitals,
+                Managiri,
+                Madurai Main Road,
+                Karaikudi,
+                Tamilnadu,
+                India.
+                
+                Creator:
+                L.Jerlin Rubini(Research Scholar)
+                Alagappa University,
+                EmailId :jel.jerlin '@' gmail.com
+                ContactNo :+91-9597231281
+                
+                Guided by:
+                Dr.P.Eswaran Assistant Professor,
+                Department of Computer Science and Engineering,
+                Alagappa University,
+                Karaikudi,
+                Tamilnadu,
+                India.
+                Emailid:eswaranperumal '@' gmail.com</p>
+
+
+        </section>
+
+
+
+</body>
